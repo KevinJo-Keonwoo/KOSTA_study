@@ -15,25 +15,25 @@
 <h1>고객가입</h1>
 
 <div>
-	<lable>아이디:</lable>
-	<input type="text" name="id1" size="15" required>
-	<input type="button" value="아이디중복확인">
+	<lable for="id">아이디:</lable>
+	<input type="text" id="id" name="id1" size="15" required>
+	<input type="button" class='iddupchk' value="아이디중복확인">
 </div>
 <div>	
-	<lable>비밀번호:</lable>
-	<input type="password" name="pw1" size="15" required>
+	<lable for="pw1">비밀번호:</lable>
+	<input type="password" id="pw1" name="pw1" size="15" required>
 </div>
 <div>
-	<lable>비밀번호확인:</lable>
-	<input type="password" name="pw2" size="15" required>
+	<lable for="pw2">비밀번호확인:</lable>
+	<input type="password" id="pw2" name="pw2" size="15" required>
 </div>
 <div>	
-	<lable>이름:</lable>
-	<input type="text" name="name1" size="15" required>
+	<lable for="name">이름:</lable>
+	<input type="text" id="name" name="name1" size="15" required>
 </div>	
 <div>
-	<lable>주소:</lable>
-	<input type="text" size="15" maxlength="5" readonly required>
+	<lable for="addr">주소:</lable>
+	<input type="text" id="addr" size="15" maxlength="5" readonly required>
 	<input type="button" value="우편번호찾기">
 </div>	
 <div>

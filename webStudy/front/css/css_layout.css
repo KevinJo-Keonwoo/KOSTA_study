@@ -1,4 +1,10 @@
 @charset "UTF-8";
+*{
+	box-sizing: border-box;
+}
+header, section,footer{
+	width:100%;
+}	
 header {
 	background-color:#FAEBE0;
 	background-image:url("https://seeklogo.com/images/S/starbucks-logo-BFBFE6C3A3-seeklogo.com.png");
@@ -10,6 +16,7 @@ header {
 	width:1000px;
 	box-sizing:border-box;
 	display: inline-block;
+	border-bottom: 1px solid #e5e5e5;
 }
 nav {
 	background-color:gray;
@@ -40,8 +47,17 @@ section > article {
 	border-bottom:none;
 	margin-bottom:10px;
 	display:inline-block;
-	
+	overflow:auto;   /*스크롤바 생성 */
 }
+/* section article:first-child>figure{   쌤이한거 
+	margin-top : 5px;
+}
+section article:first-child>figure>img.drink1{
+	width: 200px;
+}
+section article:first-child>figure>img.drink2{
+	width: 230px;
+} */
 section aside{
 	display: inline-block;
 	position:absolute;

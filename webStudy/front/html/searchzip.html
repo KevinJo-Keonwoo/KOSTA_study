@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>searchzip.html</title>
 <link rel="stylesheet" href="../css/searchzip.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../jq/searchzip.js"></script>
 </head>
 <body>
 <form action="http://localhost:8888/back/searchzip.html" method="post">
@@ -11,15 +13,30 @@
 	<input type="search" name="word" size="15">
 	<input type="submit" value="검색">
 
-<table class="table" style = "width : 500px;">
-	<tr><td class="table" width="5px">05055</td><td>서울시 광진구</td></tr>
-	<tr><td class="table" width="5px"></td><td></td></tr>
-	<tr><td class="table" width="5px"></td><td></td></tr>
-	<tr><td class="table" width="5px"></td><td></td></tr>
-	<tr><td class="table" width="5px"></td><td></td></tr>
+<div class="table" style = "width : 500px;">
+	<div class="tr" name="link">
+		<div class="td" name="zip" width="5px">05055</div>
+		<div class="td" name="addr">서울 강남구 개포로109길 21</div>
+	</div>
+	<div class="tr" name="link">
+		<div class="td" name="zip" width="5px">33000</div>
+		<div class="td" name="addr">경기도 수원시 팔달구 경수대로480번길 11-9</div>
+	</div>
+	<div class="tr" name="link">
+		<div class="td" name="zip" width="5px">12456</div>
+		<div class="td" name="addr">서울시 강남구 봉은사로13길 21</div>
+	</div>
+	<div class="tr" name="link">
+		<div class="td" name="zip" width="5px">45912</div>
+		<div class="td" name="addr">경기 성남시 분당구 성남대로 34 하나프라자 6층</div>
+	</div>
+	<div class="tr" name="link">
+		<div class="td" name="zip" width="5px">23473</div>
+		<div class="td" name="addr">경기 성남시 분당구 대왕판교로 670</div>
+	</div>
 
 
-</table>
+</div>
 
 </form>
 </body>
