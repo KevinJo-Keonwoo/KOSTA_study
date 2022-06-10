@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.addEventListener('load', function(){
+            document.querySelector('button').addEventListener('click', function(){
+                //-------부모 DOM에 접근 ----------
+                var parentWindow = window.opener;//부모 DOM에 접근 (pop을 띄운 parent창을 찾음)
+                var parentBtClose = parentWindow.document.querySelector('button.close');
+                //file프로토콜일 경우는 cross origin 오류 발생 
+                parentBtClose.style.display = "none"; //부모DOM에 접근하려면 서버에 연결해야함, Http프로토콜일경우만가능, file프로토콜 불가
+                //-------부모 DOM에 접근 ----------
+                window.close();   //자신의 창을 닫음 
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>팝업창</h1>
+    <button>창닫기</button>
+</body>
+</html>

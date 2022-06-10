@@ -1,0 +1,64 @@
+@charset "UTF-8";
+*{
+	box-sizing:border-box;
+}
+div.productlist>div.table{
+	width: 80%;
+	border: 1px solid;
+	/* display: table; */
+}
+/* div.productlist>div.table>div.tr{
+	display: table-row;
+} */
+div.productlist>div.table div.td{
+	width: 96%;
+	border: 1px solid;
+	display: inline-block;
+}
+div.productlist>div.table div.td>ul{
+	list-style-type: none;
+	margin-left:0px;	
+}
+div.productlist>div.table div.td>ul img{
+	width:80%;  /*상대비율 지정하여 넓이에따라 이미지 크기가 변경됨 */
+	max-width:300px;   /*최대로 확대되는 것은 300픽셀까지 */
+}
+@media screen and (min-width:480px) {
+	div.productlist>div.table div.td{
+		width: 48%;
+	}
+}
+@media screen and (min-width:960px) {
+	div.productlist>div.table div.td{
+		width: 32%;
+	}
+}
+/* @media screen and (max-width:960px) {
+	div.productlist>div.table div.td{
+		width: 20%;
+		border: 1px solid;
+		display: inline-block;
+	}
+} */
+
+/*
+div.productlist>table{
+	width:300px;
+}
+div.productlist>table, div.productlist>table td{
+	border:1px solid;
+ 	border-collapse: collapse; 
+}
+div.productlist>table td{
+	width:100px; 
+}
+div.productlist>table td>ul img{
+	width:80%;
+	margin: 0 10px;
+}
+
+div.productlist>table tr>td>ul{
+	list-style-type: none;
+	padding-left:0px;
+}
+*/

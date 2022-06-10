@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>signup.html</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="../css/signup.css" />
+
+<script src="../jq/signup.js"></script>
+</head>
+<body>
+
+<form action="http://localhost:8888/back/signup.html" method="post">
+<h1>고객가입</h1>
+
+<div>
+	<lable>아이디:</lable>
+	<input type="text" name="id1" size="15" required>
+	<input type="button" value="아이디중복확인">
+</div>
+<div>	
+	<lable>비밀번호:</lable>
+	<input type="password" name="pw1" size="15" required>
+</div>
+<div>
+	<lable>비밀번호확인:</lable>
+	<input type="password" name="pw2" size="15" required>
+</div>
+<div>	
+	<lable>이름:</lable>
+	<input type="text" name="name1" size="15" required>
+</div>	
+<div>
+	<lable>주소:</lable>
+	<input type="text" size="15" maxlength="5" readonly required>
+	<input type="button" value="우편번호찾기">
+</div>	
+<div>
+	<input type="text" size="15" maxlength="5" readonly>
+</div>
+<div>
+	<input type="text" name="addr" size="15">
+</div>	
+	<input type="submit" value="가입">
+	<input type="reset" value="CLEAR">
+	
+	<input type="hidden" name="buildingno" value="1" >
+	
+</form>	
+</body>
+</html>

@@ -1,0 +1,94 @@
+@charset "UTF-8";
+header {
+	background-color:#FAEBE0;
+	background-image:url("https://seeklogo.com/images/S/starbucks-logo-BFBFE6C3A3-seeklogo.com.png");
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:50px 50px;
+	height:150px;
+	line-height:150px;
+	width:1000px;
+	box-sizing:border-box;
+	display: inline-block;
+}
+nav {
+	background-color:gray;
+	background-position: right center;
+	position: relative;
+	width:150px;
+	height:50px;
+	float:right;
+	display:inline;
+}
+nav a {
+	display: inline;
+}
+header h1{
+	margin:60px;
+	display:inline;
+}
+section {
+	width:1000px;
+	display:inline-block;
+}
+/* section > article :nth-child(){ */
+section > article {
+	background-color:#C9E4C5;
+	width:800px;
+	height:300px;
+	border:1px solid black;
+	border-bottom:none;
+	margin-bottom:10px;
+	display:inline-block;
+	
+}
+section aside{
+	display: inline-block;
+	position:absolute;
+	top:160px;
+}
+figure{
+	display: inline-block;
+}
+figcaption{
+	display:inline;
+}
+
+img[alt="카페 모카"] {
+	float:left;
+	width:200px;
+}
+img[alt="나이트로 바닐라 크림"] {
+	float:left;
+	display:inline-block;
+	width:200px;
+}
+footer{
+	background-color:black;
+	color:white;
+	float:left;
+	width:1000px;
+	height:110px;
+
+}
+
+footer ul{
+	list-style-type:none;
+ 	display:inline; 
+	position: relative;
+	top:20px;
+	padding:0px;
+	
+}
+footer li{
+	display: inline-block;
+}
+.c_00b050 {
+	color:white;
+	display: block;
+}
+footer span{
+	display: block;
+	position: relative;
+	top:40px;
+}

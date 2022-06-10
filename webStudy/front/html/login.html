@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login.html</title>
+<link rel="stylesheet" href="../css/login.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../jq/login.js"></script>
+</head>
+<body style="background-color:lightgray">
+	<form action="http://localhost:8888/back/login.html" method="post">
+	<!-- <form action="http://localhost:8888/front/login.html" method="get"> -->
+	<!-- 	<fieldset style="width:100px; border:0;"> -->
+		<div class="loginbody">
+			<div class="table">
+				<div class="tr">
+					<!-- <div class="media"> -->
+						<div class="td" id="labelid">
+							<label for="inputid"><b>아이디</b></label>
+						</div>
+						<div class="td" id="test">
+							<input id="inputid" name="id2"type="text" placeholder="  아이디를 입력하세요">
+						</div>
+					<!-- </div> -->
+				</div>
+				<div class="tr">
+					<div class="td" id="labelid2">
+						<label for="inputpw"><b>비밀번호</b></label>
+					</div>
+					<div class="td" id="test">
+						<input id ="inputpw" name="pw2" type="password" placeholder="  비밀번호를 입력하세요">
+					</div>
+				</div>
+				<div class="tr">
+					<div class="td">
+						<br><input id="loginbt" type="submit" value="로그인">
+					</div>
+					<div class="td" style="text-align:right">	
+						<div class="align">
+							<span class ="bluetext">
+								<a href="http://localhost:8888/front/html/searchid.html">아이디찾기</a>
+								<a href="http://localhost:8888/front/html/searchpw.html">비밀번호찾기</a>
+							</span>
+								<input type="checkbox" checked>아이디저장
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>	
+	<!-- 	<label><b>아이디</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" size="40" placeholder="아이디를 입력하세요">
+		
+		<label for="inputp"><b>비밀번호</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input id ="inputp" type="password" size="40" placeholder="비밀번호를 입력하세요"> -->
+
+	<!-- <br>
+		<input id="loginbt" name="loginbt" type="submit" value="로그인">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<span class ="bluetext">
+		아이디찾기
+		비밀번호찾기
+		</span>
+		<input type="checkbox" checked>아이디저장 -->
+		
+
+
+	</form>
+
+</body>
+</html>
