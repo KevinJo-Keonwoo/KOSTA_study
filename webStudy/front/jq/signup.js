@@ -16,9 +16,15 @@ $(function(){
     //--아이디입력란에 포커스 END--
     
     //--우편번호 & 주소 입력 START-----
+    let popupWidth = 500;
+    let popupHeight = 300;
+    let popupX = (window.screen.width)/2 - popupWidth;
+    let popupY = (window.screen.height)/2 - popupHeight;
+    
+
     let $btPostnum = $('input[value="우편번호찾기"]');
     $btPostnum.click(function(){
-        window.open("../html/searchzip.html");
+        window.open("../html/searchzip.html", '_blank', 'width=' + popupWidth + ', height=' + popupHeight + ', left=' + popupX + ', top=' + popupY);
     })
 
     
