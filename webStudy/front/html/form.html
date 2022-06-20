@@ -5,7 +5,8 @@
 <title>form.html</title>
 </head>
 <body>
-<form action="https://www.naver.com/" autocomplete="off">
+<!-- <form action="https://www.naver.com/" autocomplete="off"> -->
+<form action="http://localhost:8888/back/request" autocomplete="off">
 	<fieldset>
 		<legend>한줄입력</legend>
 		<label for="txt1">TEXT1:</label><input id="txt1" type="text" size="5" name="t1" value="tv1" required>
@@ -25,9 +26,9 @@
 	</fieldset>
 	
 	<fieldset>
-		<input type="checkbox">ONE&nbsp;&nbsp;
-		<input type="checkbox">TWO&nbsp;&nbsp;
-		<input type="checkbox">THREE
+		<input type="checkbox" checked name ="c" value = "1">ONE&nbsp;&nbsp;
+		<input type="checkbox" checked name ="c" value = "2">TWO&nbsp;&nbsp;
+		<input type="checkbox" checked name ="c" value = "3">THREE
 	</fieldset>
 	
 	<fieldset>

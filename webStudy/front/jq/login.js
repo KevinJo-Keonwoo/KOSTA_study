@@ -41,7 +41,7 @@ $(function(){
         //
 
         //2번방법 후속 
-        let url = 'http://localhost:8888/back/jsp/login.jsp';
+        let url = 'http://localhost:8888/back/login';
         let inputIdvalue, inputPwdValue;
         inputIdvalue = $inputId.val(); //사용자가 입력해준 id값
         inputPwdValue = $inputPwd.val(); //사용자가 입력해준 비밀번호 값 
@@ -51,8 +51,9 @@ $(function(){
             url: url, //url : url, 만해도 됨 
             method: 'post',
             data: data,
-            success: function(responseText){
-                let jsonObj = JSON.parse(responseText);
+            // success: function(responseText){  //text/html로 응답할시 이줄과 아랫줄 사용 
+            //     let jsonObj = JSON.parse(responseText);
+            success : function(jsonObj){         //서블릿에서 apllication/JSON으로 할때 이걸 사용 
                 if(jsonObj.status == 1){ //로그인 성공
                     location.href = '';  //현재 사용중인 주소(메인)     // 'http://localhost:8888/front/html/css_js_layout.html'; 이렇게 풀url해도됨 
                 }else{ //로그인 실패

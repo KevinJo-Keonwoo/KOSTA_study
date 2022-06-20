@@ -1,15 +1,35 @@
 $(function(){
+    //아이디입력객체찾기
+    let $inputId = $('input[name=id1]')
+
     //가입버튼객체찾기
     let $btSubmit = $('input[type=submit]');
     
     //--아이디중복확인버튼 클릭 START--
     let $btIdupchk = $('input[value="아이디중복확인"]');
     $btIdupchk.click(function(){
-        $btSubmit.show(); 
+        $.ajax({
+            url: 'http://localhost:8888/back/iddupchk',
+            method : 'get',
+            data : {id: $inputId.val()},
+            success: function(jsonObj){
+                if(jsonObj.status == 1){ //사용가능한 아이디인경우
+                    $btSubmit.show(); 
+                }else{
+                    alert(jsonObj.msg);
+                }
+                
+            },
+            error: function(jqXHR){
+                alert('오류:' + jqXHR.status);
+            }
+        })
+        //submit과 달리 button은 기본이벤트를 처리하지 않기에 return false를 작성해주지 않아도 됨 
+        
     })
     //--아이디중복확인버튼 클릭 END--    
     //--아이디입력란에 포커스 START--
-    let $inputId = $('input[name=id1]');
+    // let $inputId = $('input[name=id1]');
     $inputId.focus(function(){
         $btSubmit.hide();
     });
@@ -53,7 +73,7 @@ $(function(){
         // let bulidingnoValue = $('input[name=buildingno]').val()  //건물번호값
         //     //요청사항이 많거나 파일 업로드는 post로 전달 
 
-        let url = "http://localhost:8888/back/jsp/signup.jsp";
+        let url = "http://localhost:8888/back/signup";
         let data = $(this).serialize();
 
                   /*{id:idValue, //이렇게 객체로 만듨 수 있으나 이것도 너무 긺
@@ -61,13 +81,14 @@ $(function(){
                     name:nameValue, 
                     addr:addrValue, 
                     bulidingno:bulidingnoValue}; */   //"id=id1&pwd=p1&name=n1~~~" 이렇게 길게 만드는 것은 비추천, 객체로 만들기 
-        alert(data);
+        // alert(data);
         $.ajax({
             url: url,
             method:'post',
             data: data,
-            success:function(responseText){
-                let jsonObj = JSON.parse(responseText);
+            // success:function(responseText){
+            //     let jsonObj = JSON.parse(responseText);   //JSON으로 실험하기위해 두줄 주석처리 
+            success:function(jsonObj){
                 alert(jsonObj.msg);
             },
             error: function(jqXHR){
